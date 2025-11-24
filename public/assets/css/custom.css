@@ -1,0 +1,24 @@
+body {
+    background: #020617;
+    color: #f8fafc;
+}
+
+* {
+    font-family: "Chakra Petch", sans-serif !important;
+}
+
+.btn.btn-primary {
+    /*background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 60%), rgb(37, 99, 235) !important;*/
+    --tw-text-opacity: 1;
+    --tw-border-opacity: 1;
+    color: rgb(226 232 240 / var(--tw-text-opacity, 1)) !important;
+    border-radius: .15rem !important;
+    border-width: 1px !important;
+    border-color: rgb(59 130 246/var(--tw-border-opacity,1)) !important;
+}
+
+.btn.btn-primary:hover {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 60%), rgb(37, 99, 235) !important;
+    --tw-brightness: brightness(.9);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
