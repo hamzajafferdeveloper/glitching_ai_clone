@@ -41,7 +41,7 @@
 
     <!-- Buttons -->
     <div class="menu-actions mt-4 d-flex gap-2">
-        <a href="#" class="btn btn-sign-in btn-outline-light flex-grow-1">Sign In</a>
-        <a href="#" class="btn btn-primary flex-grow-1">Get Started</a>
+        <a href="{{ route('auth.login') }}" class="btn btn-sign-in btn-outline-light flex-grow-1">Sign In</a>
+        <a href="{{ route('auth.sign-up') }}" class="btn btn-primary flex-grow-1">Get Started</a>
     </div>
 </div>

@@ -12,13 +12,79 @@ body {
     --tw-text-opacity: 1;
     --tw-border-opacity: 1;
     color: rgb(226 232 240 / var(--tw-text-opacity, 1)) !important;
-    border-radius: .15rem !important;
+    border-radius: 0.15rem !important;
     border-width: 1px !important;
-    border-color: rgb(59 130 246/var(--tw-border-opacity,1)) !important;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity, 1)) !important;
 }
 
 .btn.btn-primary:hover {
-    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 60%), rgb(37, 99, 235) !important;
-    --tw-brightness: brightness(.9);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+    background: radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 60%
+        ),
+        rgb(37, 99, 235) !important;
+    --tw-brightness: brightness(0.9);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+        var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+        var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+.form-control {
+    background-color: transparent !important;
+    border-color: hsl(217.2 32.6% 17.5%) !important;
+    color: hsl(215, 20.2%, 65.1%) !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.1rem rgba(0, 110, 255, 0.25);
+}
+
+.page-scanning-bg {
+    background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(to bottom, #030919 0%, #0d1a42 50%, #030919 100%);
+
+    background-size: 60px 60px, 60px 60px, 100% 100%;
+
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.page-scanning-bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        #030919 0,
+        #030919 0.05px,
+        transparent 2px,
+        transparent 5px
+    );
+    animation: scanLines 120s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes scanLines {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }

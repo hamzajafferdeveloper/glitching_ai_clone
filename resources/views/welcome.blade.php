@@ -1,8 +1,6 @@
 @extends('layout.app')
 
-{{-- @section('head') --}}
 <link rel="stylesheet" href="{{ asset('/assets/css/custom/welcome.css') }}">
-{{-- @endsection --}}
 
 @section('content')
     <section class="welcome-section mb-7">
@@ -55,7 +53,7 @@
                 </div>
 
                 <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center w-100 p-4">
-                    <a href="#"
+                    <a href="{{ route('auth.sign-up') }}"
                         class="btn welcome-action-btn btn-primary d-flex justify-content-center align-items-center">
                         Get Started
                     </a>
@@ -91,7 +89,7 @@
 
             </div>
         </div>
-        <div class="" style="">
+        <div>
             <h1 class="heading-h2">
                 Imagine Having A Dropshipping Store <br />
                 Without the Hard Work
@@ -257,7 +255,7 @@
             </h1>
             <p>Stop guessing and start selling. Glithing give to everything you need to launch, grow and succeed.</p>
             <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center w-100 p-4">
-                <a href="#" class="btn ready-to-launch-action-btn d-flex justify-content-center align-items-center">
+                <a href="{{ route('auth.sign-up') }}" class="btn ready-to-launch-action-btn d-flex justify-content-center align-items-center">
                     Get Started
                 </a>
                 <button type="button"

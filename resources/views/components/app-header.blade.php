@@ -12,8 +12,8 @@
 
         {{-- Right Buttons --}}
         <div class="nav-bar-buttons align-items-center gap-3">
-            <a href="#" class="text-light text-decoration-none sign-in-link">Sign In</a>
-            <a href="#" class="btn btn-primary px-3">Get Started</a>
+            <a href="{{ route('auth.login') }}" class="text-light text-decoration-none sign-in-link">Sign In</a>
+            <a href="{{ route('auth.sign-up') }}" class="btn btn-primary px-3">Get Started</a>
         </div>
         <div>
             <button class="navbar-toggler" type="button">
